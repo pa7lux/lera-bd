@@ -129,3 +129,7 @@ h1 {
   object-fit: contain;
   object-position: center;
 }
+
+.swiper-button-prev, .swiper-button-next {
+  z-index: 30;
+}
