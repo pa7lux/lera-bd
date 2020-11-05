@@ -4,20 +4,26 @@
   src: url(./font.woff2);
 }
 
-html {
+html, body {
   height: 100%;
-}
-body {
   margin: 0;
+}
+
+body {
+  padding: 20px;
+  background-color: #F2A9B4;
+  box-sizing: border-box;
+}
+
+.page {
+  min-width: 768px;
   font-family: 'font';
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   grid-template-rows: 55px 1fr 50px;
   align-items: center;
   height: 100%;
-  background-color: #F2A9B4;
-  padding: 20px;
-  box-sizing: border-box;
+  
 }
 
 h1, h2, p {
@@ -151,4 +157,9 @@ h1 {
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
+}
+
+iframe {
+  box-shadow: 0 0 50px white;
+  border-radius: 10px;
 }
