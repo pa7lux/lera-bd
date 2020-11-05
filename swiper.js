@@ -1,25 +1,19 @@
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  keyboard : true,
-  initialSlide: 1,
+  speed: 800,
   loop: true,
+  effect: 'coverflow',
   grabCursor: true,
-  threshold : 0
-
-})
-
-const prev = document.querySelector('.swiper-button-prev');
-const next = document.querySelector('.swiper-button-next');
-
-prev.onclick = () => {
-  console.log('ddd');
-  mySwiper.slidePrev();
-}
-
-next.onclick = () => {
-  console.log('sdfsfd')
-  mySwiper.slideNext();
-}
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 60,
+    stretch: 0,
+    depth: 90,
+    modifier: 1,
+    slideShadows: true,
+  },
+});

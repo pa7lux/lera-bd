@@ -14,17 +14,17 @@ const jokeBtn = document.querySelector('.joke');
 meditateBtn.onclick = () => {
   current = 'main';
   changeBlock(current);
-}
+};
 
 videoBtn.onclick = () => {
   current = 'video';
   changeBlock(current);
-}
+};
 
 jokeBtn.onclick = () => {
   current = 'joke';
   changeBlock(current);
-}
+};
 
 function changeBlock(state) {
   if(state === 'main') {
@@ -42,6 +42,7 @@ function changeBlock(state) {
     main.classList.remove('visible');
     video.classList.remove('visible');
     joke.classList.add('visible');
+    mySwiper.update();
   }
 }
 

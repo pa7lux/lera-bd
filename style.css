@@ -84,6 +84,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
 .world {
   overflow: hidden;
   width: 100%;
@@ -96,7 +97,7 @@ h1 {
 
 .joke-block {
   display: none;
-  height: 100%;
+  width: 100%;
 }
 
 .video-btn {
@@ -111,25 +112,43 @@ h1 {
   display: block;
 }
 
-
-.swiper-container {
-  width: 90%;
-  height: 100%;
-}
 .swiper-slide {
-  width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: auto;
+  max-width: 600px;
+  max-height: 600px;
 }
+
 .slider-image {
-  width: 60%;
-  height: 60%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   object-position: center;
 }
 
 .swiper-button-prev, .swiper-button-next {
   z-index: 30;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after,
+.swiper-button-next::before, .swiper-button-prev::before {
+  font-family: 'font';
+  font-size: 0;
+  background-image: url('./images/slider-prev-next.gif');
+  width: 100%;
+  height: 50px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  width: 50px;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
 }
